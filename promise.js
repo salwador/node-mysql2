@@ -13,6 +13,14 @@ function makeDoneCb(resolve, reject, localErr) {
       localErr.sql = err.sql;
       localErr.sqlState = err.sqlState;
       localErr.sqlMessage = err.sqlMessage;
+      
+      // @bsnext-patch start
+      // Wrap "ER_DUP_ENTRY" handler
+      // Add "sqlDupIndex" field for get index-name
+      if (err.code === 'ER_DUP_ENTRY') {
+        localErr.sqlDupIndex = err.sqlMessage.split(` for key `)[1].slice(1, -1);
+      }
+      // @bsnext-patch end
       reject(localErr);
     } else {
       resolve([rows, fields]);

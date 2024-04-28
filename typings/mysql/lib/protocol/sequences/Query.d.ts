@@ -83,6 +83,14 @@ export interface QueryOptions {
    * By specifying a function that returns a readable stream, an arbitrary stream can be sent when sending a local fs file.
    */
   infileStreamFactory?: (path: string) => Readable;
+  
+  // @bsnext-patch start
+	transformNestKeys?: boolean;
+	minifyQueries?: boolean;
+	deleteNulls?: boolean;
+	deleteUndefined?: boolean;
+	booleanEnum?: boolean;  
+  // @bsnext-patch end
 }
 
 export interface StreamOptions {

@@ -326,6 +326,14 @@ export interface ConnectionOptions {
   authPlugins?: {
     [key: string]: AuthPlugin;
   };
+
+  // @bsnext-patch start
+	transformNestKeys?: boolean;
+	minifyQueries?: boolean;
+	deleteNulls?: boolean;
+	deleteUndefined?: boolean;
+	booleanEnum?: boolean;
+  // @bsnext-patch end
 }
 
 declare class Connection extends QueryableBase(ExecutableBase(EventEmitter)) {
