@@ -1,5 +1,83 @@
 # Changelog
 
+## [3.11.3](https://github.com/sidorares/node-mysql2/compare/v3.11.2...v3.11.3) (2024-09-14)
+
+
+### Bug Fixes
+
+* **typings:** synchronize types of sqlstring ([#3047](https://github.com/sidorares/node-mysql2/issues/3047)) ([81be01b](https://github.com/sidorares/node-mysql2/commit/81be01b1bce30cac3f6fcc130aaf859349c5d3d2))
+
+## [3.11.2](https://github.com/sidorares/node-mysql2/compare/v3.11.1...v3.11.2) (2024-09-11)
+
+
+### Bug Fixes
+
+* resolve LRU conflicts, cache loss and premature engine breaking change ([#2988](https://github.com/sidorares/node-mysql2/issues/2988)) ([2c3c858](https://github.com/sidorares/node-mysql2/commit/2c3c858fd0425b29f488a7cd24df749539c93aa2))
+
+## [3.11.1](https://github.com/sidorares/node-mysql2/compare/v3.11.0...v3.11.1) (2024-09-10)
+
+
+### Bug Fixes
+
+* **createPoolCluster:** add pattern and selector to promise-based `getConnection` ([#3017](https://github.com/sidorares/node-mysql2/issues/3017)) ([ab7c49f](https://github.com/sidorares/node-mysql2/commit/ab7c49f24fad7b241cdc0046ead9917bbddccced)), closes [#1381](https://github.com/sidorares/node-mysql2/issues/1381)
+* update connection cleanup process to handle expired connections and exceeding `config.maxIdle` ([#3022](https://github.com/sidorares/node-mysql2/issues/3022)) ([b091cf4](https://github.com/sidorares/node-mysql2/commit/b091cf49d4165e991cb7c51dd6074be1c996a98e))
+
+## [3.11.0](https://github.com/sidorares/node-mysql2/compare/v3.10.3...v3.11.0) (2024-07-27)
+
+
+### Features
+
+* fully support VECTOR type results ([9576742](https://github.com/sidorares/node-mysql2/commit/9576742f56f234ac50bfd099bc84c8f593971e74))
+
+## [3.10.3](https://github.com/sidorares/node-mysql2/compare/v3.10.2...v3.10.3) (2024-07-15)
+
+
+### Bug Fixes
+
+* handshake SSL error with AWS RDS ([#2857](https://github.com/sidorares/node-mysql2/issues/2857)) ([de071bb](https://github.com/sidorares/node-mysql2/commit/de071bb1d7738693793ff3ea24d5f933f6fa4792))
+
+## [3.10.2](https://github.com/sidorares/node-mysql2/compare/v3.10.1...v3.10.2) (2024-07-01)
+
+
+### Bug Fixes
+
+* **typeCast:** ensure the same behavior for `field.string()` with `query` and `execute` ([#2820](https://github.com/sidorares/node-mysql2/issues/2820)) ([27e38ea](https://github.com/sidorares/node-mysql2/commit/27e38ea3f084f445a8e5a4909341b5e740bdf474))
+
+## [3.10.1](https://github.com/sidorares/node-mysql2/compare/v3.10.0...v3.10.1) (2024-06-13)
+
+
+### Bug Fixes
+
+* setMaxParserCache throws TypeError ([#2757](https://github.com/sidorares/node-mysql2/issues/2757)) ([aa8604a](https://github.com/sidorares/node-mysql2/commit/aa8604a32b28c2024da006edce30d88ad22d8a06))
+
+## [3.10.0](https://github.com/sidorares/node-mysql2/compare/v3.9.9...v3.10.0) (2024-05-30)
+
+
+### Features
+
+* add jsonStrings option ([#2642](https://github.com/sidorares/node-mysql2/issues/2642)) ([9820fe5](https://github.com/sidorares/node-mysql2/commit/9820fe51b48cadd48024956e62d9fceac2e5a880))
+
+
+### Bug Fixes
+
+* **stream:** reads should emit the dataset number for each dataset ([#2628](https://github.com/sidorares/node-mysql2/issues/2628)) ([4dab4ca](https://github.com/sidorares/node-mysql2/commit/4dab4cad2c3b9b165d6118636a179b5443e50442))
+
+## [3.9.9](https://github.com/sidorares/node-mysql2/compare/v3.9.8...v3.9.9) (2024-05-29)
+
+
+### Bug Fixes
+
+* **connection config:** remove keepAliveInitialDelay default value ([#2712](https://github.com/sidorares/node-mysql2/issues/2712)) ([688ebab](https://github.com/sidorares/node-mysql2/commit/688ebab84961ae82863f811fa772cfd26fbadc0e))
+
+## [3.9.8](https://github.com/sidorares/node-mysql2/compare/v3.9.7...v3.9.8) (2024-05-26)
+
+
+### Bug Fixes
+
+* **security:** sanitize fields and tables when using nestTables ([#2702](https://github.com/sidorares/node-mysql2/issues/2702)) ([efe3db5](https://github.com/sidorares/node-mysql2/commit/efe3db527a2c94a63c2d14045baba8dfefe922bc))
+* support deno + caching_sha2_password FULL_AUTHENTICATION_PACKET flow ([#2704](https://github.com/sidorares/node-mysql2/issues/2704)) ([2e03694](https://github.com/sidorares/node-mysql2/commit/2e0369445ba1581b427f78689a935ac3debfbf07))
+* **typings:** typo from `jonServerPublicKey` to `onServerPublicKey` ([#2699](https://github.com/sidorares/node-mysql2/issues/2699)) ([8b5f691](https://github.com/sidorares/node-mysql2/commit/8b5f6911b69b766a3732fa160049d263460da74b))
+
 ## [3.9.7](https://github.com/sidorares/node-mysql2/compare/v3.9.6...v3.9.7) (2024-04-21)
 
 

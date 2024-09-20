@@ -326,6 +326,13 @@ export interface ConnectionOptions {
   authPlugins?: {
     [key: string]: AuthPlugin;
   };
+  
+  /**
+   * Force JSON to be returned as string
+   *
+   * (Default: false)
+   */
+  jsonStrings?: boolean;
 
   // @bsnext-patch start
 	transformNestKeys?: boolean;
