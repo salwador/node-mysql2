@@ -85,11 +85,11 @@ export interface QueryOptions {
   infileStreamFactory?: (path: string) => Readable;
   
   // @bsnext-patch start
-	transformNestKeys?: boolean;
-	minifyQueries?: boolean;
-	deleteNulls?: boolean;
-	deleteUndefined?: boolean;
-	booleanEnum?: boolean;  
+  transformNestKeys?: boolean;
+  minifyQueries?: boolean;
+  deleteNulls?: boolean;
+  deleteUndefined?: boolean;
+  booleanEnum?: boolean;  
   // @bsnext-patch end
 }
 
