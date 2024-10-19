@@ -58,7 +58,7 @@
   "author": "Andrey Sidorov <andrey.sidorov@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@bsnext/mysql-minifier": "^1.0.4",
+    "@bsnext/mysql-minifier": "^1.1.0",
     "@bsnext/nester": "^1.1.4",
     "aws-ssl-profiles": "^1.1.1",
     "denque": "^2.1.0",
