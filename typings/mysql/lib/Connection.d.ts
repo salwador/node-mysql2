@@ -335,11 +335,11 @@ export interface ConnectionOptions {
   jsonStrings?: boolean;
 
   // @bsnext-patch start
-	transformNestKeys?: boolean;
-	minifyQueries?: boolean;
-	deleteNulls?: boolean;
-	deleteUndefined?: boolean;
-	booleanEnum?: boolean;
+  transformNestKeys?: boolean;
+  minifyQueries?: boolean;
+  deleteNulls?: boolean;
+  deleteUndefined?: boolean;
+  booleanEnum?: boolean;
   // @bsnext-patch end
 }
 
