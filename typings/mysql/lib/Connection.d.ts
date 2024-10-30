@@ -340,6 +340,7 @@ export interface ConnectionOptions {
   deleteNulls?: boolean;
   deleteUndefined?: boolean;
   booleanEnum?: boolean;
+  replaceQuotes?: string;
   // @bsnext-patch end
 }
 
