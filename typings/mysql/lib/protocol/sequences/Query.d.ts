@@ -90,6 +90,7 @@ export interface QueryOptions {
   deleteNulls?: boolean;
   deleteUndefined?: boolean;
   booleanEnum?: boolean;  
+  replaceQuotes?: `"` | `'` | false;
   // @bsnext-patch end
 }
 

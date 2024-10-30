@@ -3,6 +3,9 @@
 const core = require('./index.js');
 const EventEmitter = require('events').EventEmitter;
 const parserCache = require('./lib/parsers/parser_cache.js');
+// @bsnext-patch start
+const Errors = require('./lib/constants/errors.js');
+// @bsnext-patch end
 
 function makeDoneCb(resolve, reject, localErr) {
   return function (err, rows, fields) {
@@ -17,10 +20,11 @@ function makeDoneCb(resolve, reject, localErr) {
       // @bsnext-patch start
       // Wrap "ER_DUP_ENTRY" handler
       // Add "sqlDupIndex" field for get index-name
-      if (err.code === 'ER_DUP_ENTRY') {
+      if (err.errno === Errors.ER_DUP_INDEX) {
         localErr.sqlDupIndex = err.sqlMessage.split(` for key `)[1].slice(1, -1);
       }
       // @bsnext-patch end
+      
       reject(localErr);
     } else {
       resolve([rows, fields]);
