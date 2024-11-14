@@ -20,7 +20,7 @@ function makeDoneCb(resolve, reject, localErr) {
       // @bsnext-patch start
       // Wrap "ER_DUP_ENTRY" handler
       // Add "sqlDupIndex" field for get index-name
-      if (err.errno === Errors.ER_DUP_INDEX) {
+      if (err.errno === Errors.ER_DUP_ENTRY) {
         localErr.sqlDupIndex = err.sqlMessage.split(` for key `)[1].slice(1, -1);
       }
       // @bsnext-patch end
