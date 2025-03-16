@@ -1,5 +1,42 @@
 # Changelog
 
+## [3.13.0](https://github.com/sidorares/node-mysql2/compare/v3.12.0...v3.13.0) (2025-03-06)
+
+
+### Features
+
+* **`disableEval`:** add static parsers ([#3365](https://github.com/sidorares/node-mysql2/issues/3365)) ([51da653](https://github.com/sidorares/node-mysql2/commit/51da653448855a57f87fa686a10fd8aa482da498))
+* support Cloudflare Workers ([#2289](https://github.com/sidorares/node-mysql2/issues/2289)) ([a79253d](https://github.com/sidorares/node-mysql2/commit/a79253d17e5308a71501bbe8ed4df12f5805f0fd))
+
+
+### Bug Fixes
+
+* `PromisePoolCluster.of` returns `PromisePoolCluster` instead of `PoolNamespace` ([#3261](https://github.com/sidorares/node-mysql2/issues/3261)) ([be22202](https://github.com/sidorares/node-mysql2/commit/be22202e87afce0558dd079c79e0e18f45cd73ad))
+* **query:** support `VECTOR` packets in static parser ([#3379](https://github.com/sidorares/node-mysql2/issues/3379)) ([603c246](https://github.com/sidorares/node-mysql2/commit/603c24630da0f999a01227d44cf2633d703e40ed))
+
+## [3.12.0](https://github.com/sidorares/node-mysql2/compare/v3.11.5...v3.12.0) (2024-12-23)
+
+
+### Features
+
+* **PoolCluster:** `restoreNodeTimeout` implementation ([#3218](https://github.com/sidorares/node-mysql2/issues/3218)) ([9a38601](https://github.com/sidorares/node-mysql2/commit/9a3860186c12452c8e4b60d700d4e1599cc7aefa))
+
+## [3.11.5](https://github.com/sidorares/node-mysql2/compare/v3.11.4...v3.11.5) (2024-11-28)
+
+
+### Bug Fixes
+
+* 1040 datetime fields returned without time part when time is 00:00:00 ([#3204](https://github.com/sidorares/node-mysql2/issues/3204)) ([bded498](https://github.com/sidorares/node-mysql2/commit/bded4980065319e58a4f87d828cc355fb79f5bd3))
+* circular dependencies ([#3081](https://github.com/sidorares/node-mysql2/issues/3081)) ([d5a76e6](https://github.com/sidorares/node-mysql2/commit/d5a76e6c49fbb1bfea405ad809e3076fe5bda39d))
+* Deno `v2` requires `commonjs` type explicitly ([#3209](https://github.com/sidorares/node-mysql2/issues/3209)) ([cdc9415](https://github.com/sidorares/node-mysql2/commit/cdc9415c7cbe5806996b05415841b283ae0bd85d))
+
+## [3.11.4](https://github.com/sidorares/node-mysql2/compare/v3.11.3...v3.11.4) (2024-11-05)
+
+
+### Bug Fixes
+
+* **types:** correct TypeCast's Next callback to return unknown ([#3129](https://github.com/sidorares/node-mysql2/issues/3129)) ([401db79](https://github.com/sidorares/node-mysql2/commit/401db79b88cae8731a9eb334e456528134f821f9))
+
 ## [3.11.3](https://github.com/sidorares/node-mysql2/compare/v3.11.2...v3.11.3) (2024-09-14)
 
 
