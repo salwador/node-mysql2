@@ -114,6 +114,15 @@ exports.createConnection = function (args) {
     ssl: (args && args.ssl) ?? config.ssl,
     jsonStrings: args && args.jsonStrings,
     disableEval,
+    // @bsnext-patch start
+    transformNestKeys: args && args.transformNestKeys,
+    minifyQueries: args && args.minifyQueries,
+    deleteNulls: args && args.deleteNulls,
+    deleteUndefined: args && args.deleteUndefined,
+    booleanEnum: args && args.booleanEnum,
+    replaceQuotes: args && args.replaceQuotes
+    // @bsnext-patch end
+    
   };
 
   const conn = driver.createConnection(params);
